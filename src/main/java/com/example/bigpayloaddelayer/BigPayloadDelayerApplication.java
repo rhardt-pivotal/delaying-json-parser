@@ -30,13 +30,6 @@ public class BigPayloadDelayerApplication {
 	}
 
 	@PostMapping(path = "/postdelay/{delay}", consumes = "application/json", produces = "application/json")
-	@ApiOperation(value = "Make a POST request to upload the file",
-			produces = "application/json", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	@ApiResponses(value = {
-			@ApiResponse(code = 200, message = "The POST call is Successful"),
-			@ApiResponse(code = 500, message = "The POST call is Failed"),
-			@ApiResponse(code = 404, message = "The API could not be found")
-	})
 	public ResponseEntity<String> uploadFile(@RequestBody Map<String, Object> request, @PathVariable int delay){
 
 				try {
